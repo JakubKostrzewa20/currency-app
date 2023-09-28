@@ -1,0 +1,42 @@
+﻿<Window x:Class="testowa_aplikacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testowa_aplikacja"
+        mc:Ignorable="d"
+        Title="Kursy walut" Height="450" Width="800" Background="#FF25ABA6" Topmost="True" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button Name="add"  Content="Kliknij mnie" Click="Button_Click" Grid.Column="1" Grid.Row="2" Height="50" Width="150" FontSize="20"></Button>
+
+        <Image Source="obrazki\equal.png" Grid.Column="1" Height="70"/>
+        <Image Source="obrazki\equal.png" Grid.Row="1" Height="70" ClipToBounds="True" Grid.ColumnSpan="3" Margin="266,37,266,37"/>
+        <ComboBox Name="waluta1" SelectionChanged="Waluta2_SelectionChanged"  Height="50" Width="200" FontSize="20">
+            <ComboBoxItem Content="USD"></ComboBoxItem>
+            <ComboBoxItem Content="PLN"></ComboBoxItem>
+            <ComboBoxItem Content="EUR"></ComboBoxItem>
+            <ComboBoxItem Content="CAD"></ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="waluta2" SelectionChanged="Waluta1_SelectionChanged" Grid.Column="2" Height="50" Width="200" FontSize="20">
+            <ComboBoxItem Content="USD"></ComboBoxItem>
+            <ComboBoxItem Content="PLN"></ComboBoxItem>
+            <ComboBoxItem Content="EUR"></ComboBoxItem>
+            <ComboBoxItem Content="CAD"></ComboBoxItem>
+        </ComboBox>
+        <TextBox Name="wpisane" Grid.Column="0" Grid.Row="1" Height="50" Width="200" Background="#FFDCD4D4" FontSize="20" ></TextBox>
+        <TextBlock Name="wynik" Grid.Column="2" Grid.Row="1" Height="50" Width="200" Background="#FFDCD4D4" FontSize="20"></TextBlock>
+
+
+    </Grid>
+</Window>
